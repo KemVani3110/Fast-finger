@@ -1,8 +1,9 @@
-let word = ['rock', 'paper', 'sand','car', 'phone', 'trump', 'sail', 'salt', 'danger', 'give', 'up','rick', 'roll'];
+let word = ['rock', 'paper', 'sand','car', 'phone', 'trump', 'sail', 'salt', 'danger', 'give', 'up','rick', 'roll','gay','noob','not','dont','can','gao'];
 let radword = word[Math.floor(Math.random() * word.length)];
 let rad = document.getElementById('inputword');
+let error = 0;
 console.log(radword);
-
+let err = document.getElementById('error');
 let title = document.getElementById('title')
 
 let point = 0;
@@ -14,7 +15,8 @@ title.innerHTML = radword;
 let time = 11
 function lopp()
 {
-    score.innerHTML = "Your Score: " + point;
+    score.innerHTML = "Your Score: " + point ;
+    err.innerHTML = "Your Error: " + error;
    
     radword = word[Math.floor(Math.random() * word.length)];
     title.innerHTML = radword
@@ -33,6 +35,8 @@ rad.addEventListener("keyup", ({key}) => { // bắt sk enter là keyup
         }
         else{
             lopp();
+            error++;
+
         }
     }
 })
@@ -43,8 +47,10 @@ rad.addEventListener("keyup", ({key}) => { // bắt sk enter là keyup
     time--;
     tym.innerHTML= "Your Time left: " + time;
     
-    if (time <= 0){
-        
+    if (time <= -1){
+       alert("Hết giờ!!" );
+       alert(`Điểm tổng của bạn là: ${point} Và Lỗi sai của bạn là: ${error}` );
+       restart();
        lopp();
     }
  }
@@ -55,6 +61,7 @@ addBt.addEventListener('click',restart)
 
 function restart()
 {
+    error = 0;
     point = 0;
     lopp();
 }
