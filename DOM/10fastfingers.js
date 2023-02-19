@@ -11,7 +11,7 @@ let score = document.getElementById('point1');
 let tym = document.getElementById('tim');
 
 title.innerHTML = radword;
-
+alert("Chào mừng bạn đến với Ten Fast Finger with Rick Astley!!");
 let time = 11
 function lopp()
 {
