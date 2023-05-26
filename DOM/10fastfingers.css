@@ -9,34 +9,41 @@
 }
 h1{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-size: 45px;
+    color: red;
 }
-
-p{
+.score{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.word{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    margin-top: 0px;
+    font-size: 30px;
+    margin-top: 10px;
 }
 
 input
 {
-    width: 190px;
-    height: 16px;
+    width: 55%;
+    height: 2rem;
     border-top: none;
     border-bottom: black solid 2px;
     border-left: none;
     border-right: none;
+    border-radius: 10px;
 }
 
 input:hover
 {
     border-style: none;
     border-top: none;
-    border-bottom: blue solid 2px;
+    border-bottom: rgb(86, 86, 215) solid 3px;
     border-left: none;
     border-right: none;
     
@@ -52,16 +59,6 @@ input:focus {
     justify-content: center;
     align-items: center;
 }
-h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .main{
     display: flex;
@@ -71,19 +68,20 @@ h3{
 }
 
 #addBt{
-    margin: 20px;
-    height: 10%;
-    width: 10%;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 html, body{
     background-image: url('https://cdn.vox-cdn.com/thumbor/Si2spWe-6jYnWh8roDPVRV7izC4=/0x0:1192x795/1400x788/filters:focal(596x398:597x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/22312759/rickroll_4k.jpg');
+    background-size: cover; 
 }
 
 .po{
     margin: 20px;
-    background-color: rgb(223, 218, 218);
+    background-color: none;
     width: 50%;
     margin-left: 25%;   
 }
@@ -96,7 +94,9 @@ html, body{
     align-self: center;
     justify-content: row;
 }
-
+.key-container{
+    margin-top: 3rem;
+}
 #row1{
     display: flex;
     align-self: center;
@@ -120,8 +120,8 @@ html, body{
 }
 
 #keyboard Input[Type='Button'] {
-    Padding: 10px 20px;
-    Border-Radius: 30px;
+    Padding: 10px 15px;
+    Border-Radius: 20px;
     Border: 3px Solid #202c2b;
     Background: #13ab9e;
     Color: #Fff;
@@ -131,20 +131,30 @@ html, body{
     cursor: pointer;
 }
 
-#error{
+#error,
+#point1,
+#tim{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    
+    font-size: 25px;
+    margin-bottom: 2rem;
 }
 
 #title{
     font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
 }
 
 #title:hover
 {
     text-transform: uppercase;
-    color: #13ab9e;
+    color: red;
+}
+
+.btn-reset{
+    margin-top: 30px;
 }
